@@ -1,0 +1,59 @@
+<div>
+  <hr>
+  <!--  <mat-slider min="1" max="100" step="1" value="1"></mat-slider>-->
+  <div style="display: flex; align-items: center">
+    <div style="display: flex; align-items: center">
+      <img src="assets/images/width.svg" width="30px"/>
+      <input type="text" class="input-editor-label" [(ngModel)]="size.width">
+      <!--      <input type="text" class="input-editor-label" [(ngModel)]="size.width" (keyup)="changeSize()">-->
+    </div>
+    <div style="display: flex; align-items: center">
+      <img src="assets/images/height1.svg" height="25px"/>
+      <input type="text" class="input-editor-label" [(ngModel)]="size.height">
+      <!--      <input type="text"  class="input-editor-label" [(ngModel)]="size.height" (keyup)="changeSize()">-->
+    </div>
+
+
+    <!--    <div class="btn-editor-label" (click)="addFigure('circle')">-->
+    <div class="btn-editor-label">
+      <img src="assets/images/add_circle.svg" height="40px">
+    </div>
+    <!--    <div class="btn-editor-label" (click)="addFigure('rectangle')">-->
+    <div class="btn-editor-label">
+      <img src="assets/images/add_rectangle.svg" height="40px">
+    </div>
+
+    <!--    <div class="btn-editor-label" (click)="openBarcodeDialog()">-->
+    <div class="btn-editor-label">
+      <img src="assets/images/add_barcode.svg" height="40px">
+    </div>
+
+    <!--    <div class="btn-editor-label" disabled (click)="openTextEditorDialog(true)">-->
+    <div class="btn-editor-label">
+      <img src="assets/images/add_text.svg" height="40px">
+    </div>
+
+    <label class="btn-editor-label" for="input_image"><img src="assets/images/add_photo.svg" width="40px"></label>
+    <input type="file" id="input_image">
+    <!--    <input type="file" id="input_image"(change)="readUrl($event);">-->
+
+
+  </div>
+  <hr>
+  <div style="display: flex; align-items: center">
+    <div class="btn-editor-label">
+      <img src="assets/images/save.svg" height="40px">
+    </div>
+    <div class="btn-editor-label">
+      <img src="assets/images/cancel.svg" height="40px">
+    </div>
+    <div class="btn-editor-label">
+      <img src="assets/images/print.svg" height="40px">
+    </div>
+    <div class="btn-editor-label" >
+      <img src="assets/images/cleaning.svg" height="40px">
+    </div>
+
+  </div>
+  <canvas id="canvas"></canvas>
+</div>
