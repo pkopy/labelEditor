@@ -4,22 +4,22 @@
   <div style="display: flex; align-items: center">
     <div style="display: flex; align-items: center">
       <img src="assets/images/width.svg" width="30px"/>
-      <input type="text" class="input-editor-label" [(ngModel)]="size.width">
+      <input type="text" class="input-editor-label" [(ngModel)]="size.width" (keyup)="changeSize()">
       <!--      <input type="text" class="input-editor-label" [(ngModel)]="size.width" (keyup)="changeSize()">-->
     </div>
     <div style="display: flex; align-items: center">
       <img src="assets/images/height1.svg" height="25px"/>
-      <input type="text" class="input-editor-label" [(ngModel)]="size.height">
+      <input type="text" class="input-editor-label" [(ngModel)]="size.height" (keyup)="changeSize()">
       <!--      <input type="text"  class="input-editor-label" [(ngModel)]="size.height" (keyup)="changeSize()">-->
     </div>
 
 
     <!--    <div class="btn-editor-label" (click)="addFigure('circle')">-->
-    <div class="btn-editor-label">
+    <div class="btn-editor-label" (click)="addFigure('circle')">
       <img src="assets/images/add_circle.svg" height="40px">
     </div>
     <!--    <div class="btn-editor-label" (click)="addFigure('rectangle')">-->
-    <div class="btn-editor-label">
+    <div class="btn-editor-label" (click)="addFigure('rectangle')">
       <img src="assets/images/add_rectangle.svg" height="40px">
     </div>
 
@@ -34,7 +34,7 @@
     </div>
 
     <label class="btn-editor-label" for="input_image"><img src="assets/images/add_photo.svg" width="40px"></label>
-    <input type="file" id="input_image">
+    <input type="file" id="input_image" (change)="readUrl($event);">
     <!--    <input type="file" id="input_image"(change)="readUrl($event);">-->
 
 
@@ -50,7 +50,7 @@
     <div class="btn-editor-label">
       <img src="assets/images/print.svg" height="40px">
     </div>
-    <div class="btn-editor-label" >
+    <div class="btn-editor-label" (click)="confirmClear()">
       <img src="assets/images/cleaning.svg" height="40px">
     </div>
 
